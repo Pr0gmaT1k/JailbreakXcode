@@ -1,4 +1,4 @@
-# Jailbreak your Xcode to create Jailbreak App
+# Jailbreak your Xcode to create Jailbreak iOS App
 ## Use:
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/AzerTyQsdF/JailbreakXcode/master/JailbreakXcode.sh)
