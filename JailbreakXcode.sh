@@ -1,9 +1,10 @@
 #!/bin/sh
 
-if [ -d "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/PrivateFrameworks" ]
-then
+# Check and remove exising PrivateFrameworks
+if [ -d "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/PrivateFrameworks" ]; then
 	echo "remove existing PrivateFrameworks"
   sudo rm -r /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/PrivateFrameworks
+fi
 
 # clone PrivateFrameworks
 sudo git clone https://github.com/AzerTyQsdF/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/PrivateFrameworks
@@ -15,7 +16,7 @@ sudo rm /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/D
 sudo git clone https://github.com/AzerTyQsdF/SDKSettingsJailbreak /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/temp
 
 # Move new SDKSettings at the correct place
-sudo mv /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/temp/SDKSettings.plist ..
+sudo mv /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/temp/SDKSettings.plist /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk
 
 # Remove Temp dir.
 sudo rm -r /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/temp
